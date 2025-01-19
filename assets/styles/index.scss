@@ -1,1 +1,6 @@
-@import "./_settings.scss";
+@import "./settings";
+@import "./layout/header";
+@import "./layout/navbar";
+@import "./pages/home";
+@import "./pages/pages";
+@import "./layout/footer";

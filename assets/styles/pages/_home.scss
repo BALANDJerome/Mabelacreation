@@ -1,0 +1,55 @@
+.banniere_accueil {
+  position: relative;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 20px;
+  max-width: 1200px;
+  h2 {
+    margin: 0;
+    background: $color1;
+    box-shadow: 0 0 20px 10px $color1;
+    width: 70vw;
+    max-width: 1000px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.7rem;
+    font-weight: bold;
+  }
+  img {
+    height: 28vh;
+    width: 100%;
+  }
+}
+.descript_accueil {
+  text-align: center;
+  margin: 50px auto;
+  h1 {
+    font-size: 2.7rem;
+    margin-bottom: 30px;
+    color: $color2;
+  }
+  p {
+    margin: 10px auto;
+    font-size: 1.5rem;
+  }
+}
+.favorite_accueil {
+  text-align: center;
+  h3 {
+    font-size: 2.7rem;
+    color: $color2;
+  }
+  div {
+    display: flex;
+    justify-content: space-evenly;
+    img {
+      height: 200px;
+      margin: 20px auto;
+    }
+  }
+}
