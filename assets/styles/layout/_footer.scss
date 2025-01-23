@@ -1,9 +1,16 @@
 footer {
   background: #bb2b7896;
-  height: 10vh;
+  height: 15vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   a {
     margin: auto 10px;
+    img {
+      height: 5vh;
+      &:hover {
+        scale: 125%;
+        transition: 0.3s;
+      }
+    }
   }
 }
