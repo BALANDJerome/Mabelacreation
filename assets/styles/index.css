@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "alice";
+  src: url(../fonts/Alice-Regular.ttf);
+}
+@font-face {
+  font-family: "belleza";
+  src: url(../fonts/Belleza-Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +15,16 @@
 
 body {
   background: rgb(250, 238, 217);
+}
+
+h1,
+h2,
+h3 {
+  font-family: belleza;
+}
+
+p {
+  font-family: alice;
 }
 
 header {
@@ -35,6 +53,7 @@ nav {
 }
 nav a {
   list-style: none;
+  font-family: alice;
   border: 2px solid #bb2b79;
   background: rgb(250, 238, 217);
   padding: 10px;

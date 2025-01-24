@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "alice";
+  src: url(../fonts/Alice-Regular.ttf);
+}
+@font-face {
+  font-family: "belleza";
+  src: url(../fonts/Belleza-Regular.ttf);
+}
+
+$font1: alice;
+$font2: belleza;
 $color1: #bb2b7994;
 $color2: #bb2b79;
 
@@ -9,4 +20,12 @@ $color2: #bb2b79;
 body {
   // background: rgb(232 212 178);
   background: rgb(250 238 217);
+}
+h1,
+h2,
+h3 {
+  font-family: $font2;
+}
+p {
+  font-family: $font1;
 }
