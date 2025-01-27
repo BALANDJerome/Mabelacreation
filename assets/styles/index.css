@@ -221,6 +221,9 @@ nav a:hover {
 .Items_container .Item3_container .Item3_pics {
   border: 2px solid red;
 }
+.Items_container .Item3_container h2 {
+  margin-bottom: 10px;
+}
 
 footer {
   background: rgba(187, 43, 120, 0.5882352941);
