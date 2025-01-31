@@ -45,7 +45,7 @@ header img {
 
 nav {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   text-align: center;
   margin: 10px auto;
   padding: 5px;
