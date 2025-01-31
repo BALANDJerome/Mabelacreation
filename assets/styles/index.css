@@ -80,6 +80,12 @@ nav a:hover {
   color: rgb(250, 238, 217);
   border: 2px solid rgb(250, 238, 217);
 }
+@media screen and (max-width: 650px) {
+  nav {
+    display: block;
+    width: 200px;
+  }
+}
 
 .banniere_accueil {
   position: relative;

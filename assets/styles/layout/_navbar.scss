@@ -28,4 +28,8 @@ nav {
       border: 2px solid rgb(250 238 217);
     }
   }
+  @media screen and (max-width: 650px) {
+    display: block;
+    width: 200px;
+  }
 }
