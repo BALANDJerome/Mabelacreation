@@ -177,6 +177,10 @@ nav a:hover {
   width: 80vw;
   max-width: 1200px;
 }
+.Items_container img {
+  width: 100%;
+  height: 100%;
+}
 .Items_container .Item1_container,
 .Items_container .Item2_container,
 .Items_container .Item3_container {
@@ -225,9 +229,6 @@ nav a:hover {
 .Items_container .Item1_container {
   grid-template-columns: 30% 70%;
 }
-.Items_container .Item1_container .Item1_pics {
-  border: 2px solid red;
-}
 .Items_container .Item1_container .Item1_text li {
   margin-left: 40px;
   list-style: "- ";
@@ -240,13 +241,9 @@ nav a:hover {
 }
 .Items_container .Item2_container .Item2_pics {
   grid-area: im;
-  border: 2px solid red;
 }
 .Items_container .Item3_container {
   grid-template-columns: 30% 70%;
-}
-.Items_container .Item3_container .Item3_pics {
-  border: 2px solid red;
 }
 .Items_container .Item3_container h4 {
   margin: 10px 0;
