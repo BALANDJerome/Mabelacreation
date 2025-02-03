@@ -29,7 +29,20 @@ nav {
     }
   }
   @media screen and (max-width: 650px) {
-    display: block;
-    width: 200px;
+    // display: block;
+    // width: 250px;
+    // padding: 0;
+    // a {
+    //   margin: 2px 0;
+    //   padding: 5px;
+    // }
+    grid-template-columns: 1fr 1fr;
+    a {
+      margin: 2px;
+      &:first-of-type,
+      &:last-of-type {
+        grid-column: 1/3;
+      }
+    }
   }
 }
