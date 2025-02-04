@@ -43,6 +43,11 @@ nav {
       &:last-of-type {
         grid-column: 1/3;
       }
+      &:hover {
+        background: rgb(250 238 217);
+        color: rgb(61, 61, 61);
+        border: 2px solid $color2;
+      }
     }
   }
 }

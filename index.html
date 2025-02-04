@@ -45,10 +45,20 @@
     </section>
     <section class="favorite_accueil">
       <h3>Vos articles préférés :</h3>
-      <div>
-        <img src="./assets/img/Favoris/Fav_1.jpg" alt="Protége carnet de santé">
-        <img src="./assets/img/Favoris/Fav_2.jpg" alt="Couverture">
-        <img src="./assets/img/Favoris/Fav_3.jpg" alt="Lingettes">
+      <div class="carousel_accueil">
+        <ul>
+          <li class="slide">
+            <img src="./assets/img/Favoris/Fav_1.jpg" alt="Protége carnet de santé">
+          </li>
+          <li class="slide active">
+            <img src="./assets/img/Favoris/Fav_2.jpg" alt="Couverture">
+          </li>
+          <li class="slide">
+            <img src="./assets/img/Favoris/Fav_3.jpg" alt="Lingettes">
+          </li>
+        </ul>
+        <button class="btn" id="prev">&#10096;</button>
+        <button class="btn" id="next">&#10097;</button>
       </div>
     </section>
   </main>
@@ -61,6 +71,7 @@
     <a id="whatsapp" href="https://wa.me/+33659152401" target="_blank"><img src="./assets/img/whatsapp.png"
         alt="logo whatsapp"></a>
   </footer>
+  <script src="./index.js"></script>
 </body>
 
 </html>
