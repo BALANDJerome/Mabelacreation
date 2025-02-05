@@ -2,8 +2,8 @@
   display: grid;
   justify-content: center;
   margin: 20px auto;
-  width: 85vw;
-  max-width: 1200px;
+  width: 80vw;
+  max-width: 700px;
   h1 {
     display: flex;
     margin: 10px 0;
@@ -52,6 +52,7 @@
       li {
         margin-left: 40px;
         list-style: "- ";
+        // font-family: $font1;
       }
     }
   }
