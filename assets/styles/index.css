@@ -161,22 +161,17 @@ nav a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   list-style: none;
-  height: 366px;
+  height: 400px;
 }
-.favorite_accueil .carousel_accueil ul img {
-  width: 80%;
-  max-height: 50vh;
+.favorite_accueil .carousel_accueil ul li {
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
-.favorite_accueil .carousel_accueil ul .slide {
-  position: absolute;
-  opacity: 0;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+.favorite_accueil .carousel_accueil ul li img {
+  height: 100%;
 }
-.favorite_accueil .carousel_accueil ul .slide.active {
-  opacity: 1;
-}
-.favorite_accueil .carousel_accueil button {
+.favorite_accueil .carousel_accueil ul li button {
   position: absolute;
   background: none;
   border: none;
@@ -189,11 +184,20 @@ nav a:hover {
           transform: translateY(-50%);
   top: 50%;
 }
-.favorite_accueil .carousel_accueil #prev {
-  left: 33%;
+.favorite_accueil .carousel_accueil ul li #prev {
+  right: 180px;
 }
-.favorite_accueil .carousel_accueil #next {
-  right: 33%;
+.favorite_accueil .carousel_accueil ul li #next {
+  left: 180px;
+}
+.favorite_accueil .carousel_accueil ul .slide {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.favorite_accueil .carousel_accueil ul .slide.active {
+  opacity: 1;
 }
 
 .Title_container {
