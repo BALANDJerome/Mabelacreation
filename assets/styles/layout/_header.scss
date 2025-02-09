@@ -2,7 +2,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 80px;
   img {
     height: 300px;
+  }
+  @media screen and (max-width: 650px) {
+    margin-bottom: 220px;
   }
 }
