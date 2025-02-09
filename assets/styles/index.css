@@ -72,16 +72,19 @@ nav {
 }
 nav #nav_btn {
   position: absolute;
-  opacity: 0;
   font-size: 2.2rem;
-  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   color: rgb(61, 61, 61);
-  top: 209px;
+  top: -360px;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   background: rgb(250, 238, 217);
   height: 50px;
   width: 80px;

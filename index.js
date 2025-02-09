@@ -2,18 +2,33 @@
 const buttons = document.querySelectorAll(".btn");
 const slides = document.querySelectorAll(".slide");
 const Navbar = document.querySelector("nav");
+let navBtnIn = true;
+
 window.addEventListener("scroll", (e) => {
   if (window.scrollY > 300 && innerWidth > 650) {
     Navbar.style.position = "fixed";
     Navbar.style.top = "0";
-  } else if (innerWidth <= 650 && window.scrollY > 521) {
+  } else if (innerWidth <= 650 && window.scrollY > 521 && navBtnIn == false) {
+    nav_btn.style.top = "209px";
+    navBtnIn = false;
+  } else if (innerWidth <= 650 && window.scrollY > 521 && navBtnIn == true) {
     Navbar.style.position = "fixed";
     Navbar.style.top = "-221px";
-    nav_btn.style.opacity = "1";
+    nav_btn.style.top = "209px";
   } else {
     Navbar.style.position = "absolute";
     Navbar.style.top = "300px";
-    nav_btn.style.opacity = "0";
+    nav_btn.style.top = "-360px";
+    navBtnIn = true;
+  }
+});
+nav_btn.addEventListener("click", () => {
+  if (navBtnIn == true) {
+    Navbar.style.top = "0";
+    navBtnIn = false;
+  } else {
+    Navbar.style.top = "-221px";
+    navBtnIn = true;
   }
 });
 
