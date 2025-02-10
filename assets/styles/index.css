@@ -20,6 +20,8 @@ html {
 body {
   position: relative;
   background: rgb(250, 238, 217);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 h1,
