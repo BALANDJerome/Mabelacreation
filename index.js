@@ -4,20 +4,22 @@ const slides = document.querySelectorAll(".slide");
 const Navbar = document.querySelector("nav");
 let navBtnIn = true;
 
+const NavbarStyle = (a, b) => {
+  Navbar.style.position = a;
+  Navbar.style.top = b;
+};
+
 window.addEventListener("scroll", (e) => {
   if (window.scrollY > 300 && innerWidth > 650) {
-    Navbar.style.position = "fixed";
-    Navbar.style.top = "0";
+    NavbarStyle("fixed", "0");
   } else if (innerWidth <= 650 && window.scrollY > 521 && navBtnIn == false) {
     nav_btn.style.top = "209px";
     navBtnIn = false;
   } else if (innerWidth <= 650 && window.scrollY > 521 && navBtnIn == true) {
-    Navbar.style.position = "fixed";
-    Navbar.style.top = "-221px";
+    NavbarStyle("fixed", "-221px");
     nav_btn.style.top = "209px";
   } else {
-    Navbar.style.position = "absolute";
-    Navbar.style.top = "300px";
+    NavbarStyle("absolute", "300px");
     nav_btn.style.top = "-360px";
     navBtnIn = true;
   }
