@@ -357,35 +357,28 @@ nav a:hover {
 .Items_container .Item3_container .Item3_text p {
   margin: 10px 0;
 }
-.Items_container .Item1_container .Item1_text .tests,
-.Items_container .Item1_container .Item2_text .tests,
-.Items_container .Item1_container .Item3_text .tests,
-.Items_container .Item2_container .Item1_text .tests,
-.Items_container .Item2_container .Item2_text .tests,
-.Items_container .Item2_container .Item3_text .tests,
-.Items_container .Item3_container .Item1_text .tests,
-.Items_container .Item3_container .Item2_text .tests,
-.Items_container .Item3_container .Item3_text .tests {
-  margin-top: 25px;
+.Items_container .Item1_container .tests,
+.Items_container .Item2_container .tests,
+.Items_container .Item3_container .tests {
+  grid-area: 2/1/3/3;
+  margin: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-.Items_container .Item1_container .Item1_text .tests .test,
-.Items_container .Item1_container .Item2_text .tests .test,
-.Items_container .Item1_container .Item3_text .tests .test,
-.Items_container .Item2_container .Item1_text .tests .test,
-.Items_container .Item2_container .Item2_text .tests .test,
-.Items_container .Item2_container .Item3_text .tests .test,
-.Items_container .Item3_container .Item1_text .tests .test,
-.Items_container .Item3_container .Item2_text .tests .test,
-.Items_container .Item3_container .Item3_text .tests .test {
+.Items_container .Item1_container .tests .test,
+.Items_container .Item2_container .tests .test,
+.Items_container .Item3_container .tests .test {
   border: 2px solid black;
   background: green;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 @media screen and (max-width: 650px) {
   .Items_container .Item1_container,
