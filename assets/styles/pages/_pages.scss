@@ -38,6 +38,17 @@
       p {
         margin: 10px 0;
       }
+      .tests {
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-around;
+        .test {
+          border: 2px solid black;
+          background: green;
+          width: 40px;
+          height: 40px;
+        }
+      }
     }
     @media screen and (max-width: 650px) {
       display: block;

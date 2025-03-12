@@ -357,6 +357,36 @@ nav a:hover {
 .Items_container .Item3_container .Item3_text p {
   margin: 10px 0;
 }
+.Items_container .Item1_container .Item1_text .tests,
+.Items_container .Item1_container .Item2_text .tests,
+.Items_container .Item1_container .Item3_text .tests,
+.Items_container .Item2_container .Item1_text .tests,
+.Items_container .Item2_container .Item2_text .tests,
+.Items_container .Item2_container .Item3_text .tests,
+.Items_container .Item3_container .Item1_text .tests,
+.Items_container .Item3_container .Item2_text .tests,
+.Items_container .Item3_container .Item3_text .tests {
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.Items_container .Item1_container .Item1_text .tests .test,
+.Items_container .Item1_container .Item2_text .tests .test,
+.Items_container .Item1_container .Item3_text .tests .test,
+.Items_container .Item2_container .Item1_text .tests .test,
+.Items_container .Item2_container .Item2_text .tests .test,
+.Items_container .Item2_container .Item3_text .tests .test,
+.Items_container .Item3_container .Item1_text .tests .test,
+.Items_container .Item3_container .Item2_text .tests .test,
+.Items_container .Item3_container .Item3_text .tests .test {
+  border: 2px solid black;
+  background: green;
+  width: 40px;
+  height: 40px;
+}
 @media screen and (max-width: 650px) {
   .Items_container .Item1_container,
   .Items_container .Item2_container,
