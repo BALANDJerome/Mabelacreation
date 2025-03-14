@@ -2,6 +2,7 @@
 const buttons = document.querySelectorAll(".btn");
 const slides = document.querySelectorAll(".slide");
 const Navbar = document.querySelector("nav");
+const zoomTissus = document.querySelectorAll(".test");
 let navBtnIn = true;
 
 const NavbarStyle = (a, b) => {
@@ -44,5 +45,11 @@ buttons.forEach((button) => {
     if (newIndex >= [...slides].length) newIndex = 0;
     slides[newIndex].classList.add("active");
     slideActive.classList.remove("active");
+  });
+});
+
+zoomTissus.forEach((img) => {
+  img.addEventListener("click", () => {
+    console.log("ok");
   });
 });
