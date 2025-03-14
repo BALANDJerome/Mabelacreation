@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "alice";
   src: url(../fonts/Alice-Regular.ttf);
@@ -380,6 +381,20 @@ nav a:hover {
   cursor: zoom-in;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+}
+.Items_container .Item1_container .tests .zoom,
+.Items_container .Item2_container .tests .zoom,
+.Items_container .Item3_container .tests .zoom {
+  background: red;
+}
+.Items_container .Item1_container .tests .zoom::after,
+.Items_container .Item2_container .tests .zoom::after,
+.Items_container .Item3_container .tests .zoom::after {
+  content: "✖";
+  position: absolute;
+  top: -4px;
+  height: 10px;
+  width: 10px;
 }
 @media screen and (max-width: 650px) {
   .Items_container .Item1_container,

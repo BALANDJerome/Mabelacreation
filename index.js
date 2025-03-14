@@ -49,7 +49,23 @@ buttons.forEach((button) => {
 });
 
 zoomTissus.forEach((img) => {
+  const removeClass = () => {
+    zoomTissus.forEach((img) => {
+      if (img.className) {
+        img.style.transform = "none";
+        img.style.cursor = "zoom-in";
+        img.classList.remove("zoom");
+      }
+    });
+  };
   img.addEventListener("click", () => {
-    console.log("ok");
+    if (img.className === "test") {
+      removeClass(img);
+      img.style.transform = "scale(1.8)";
+      img.style.cursor = "zoom-out";
+      img.classList.add("zoom");
+    } else {
+      removeClass(img);
+    }
   });
 });
