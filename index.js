@@ -2,7 +2,7 @@
 const buttons = document.querySelectorAll(".btn");
 const slides = document.querySelectorAll(".slide");
 const Navbar = document.querySelector("nav");
-const zoomTissus = document.querySelectorAll(".test");
+const zoomTissus = document.querySelectorAll(".imgTissus");
 let navBtnIn = true;
 
 const NavbarStyle = (a, b) => {
@@ -59,7 +59,7 @@ zoomTissus.forEach((img) => {
     });
   };
   img.addEventListener("click", () => {
-    if (img.className === "test") {
+    if (img.className === "imgTissus") {
       removeClass(img);
       img.style.transform = "scale(1.8)";
       img.style.cursor = "zoom-out";
