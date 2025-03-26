@@ -47,14 +47,14 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 header img {
   height: 300px;
 }
 @media screen and (max-width: 650px) {
   header {
-    margin-bottom: 220px;
+    margin-bottom: 240px;
   }
 }
 
@@ -289,6 +289,11 @@ nav a:hover {
   margin: 20px auto;
   width: 80vw;
   max-width: 700px;
+  padding: 10px;
+  border: 1px solid #bb2b79;
+  -webkit-box-shadow: 5px 5px 0px 0px #bb2b79;
+          box-shadow: 5px 5px 0px 0px #bb2b79;
+  border-radius: 20px;
 }
 .Title_container h1 {
   display: -webkit-box;

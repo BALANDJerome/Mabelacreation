@@ -4,6 +4,11 @@
   margin: 20px auto;
   width: 80vw;
   max-width: 700px;
+  padding: 10px;
+  // background: #bb2b7963;
+  border: 1px solid $color2;
+  box-shadow: 5px 5px 0px 0px $color2;
+  border-radius: 20px;
   h1 {
     display: flex;
     margin: 10px 0;
