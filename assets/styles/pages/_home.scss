@@ -115,16 +115,26 @@
         opacity: 0;
         transition: 0.5s ease-in-out;
       }
-      // .slide:first-of-type {
-      //   transform: scale(0.8) translate(75%);
-      //   // clip-path: polygon(-25% 0%, 100% 20%, 100% 80%, -25% 100%);
-      // }
-      // .slide:last-of-type {
-      //   transform: scale(0.8) translate(-75%);
-      //   // clip-path: polygon(0% 20%, 125% 0%, 125% 100%, 0% 80%);
-      // }
       .slide.active {
         opacity: 1;
+      }
+    }
+    span {
+      position: absolute;
+      transform: translate(-50%);
+      bottom: 0px;
+      cursor: default;
+      input {
+        appearance: none;
+        border: 2px solid rgb(250 238 217);
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        transition: 0.5s;
+        &:checked {
+          background-color: $color2;
+          border: none;
+        }
       }
     }
   }

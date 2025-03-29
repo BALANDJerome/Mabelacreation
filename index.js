@@ -1,8 +1,5 @@
-// console.log("hello");
-const buttons = document.querySelectorAll(".btn");
-const slides = document.querySelectorAll(".slide");
+// Navbar =>
 const Navbar = document.querySelector("nav");
-const zoomTissus = document.querySelectorAll(".imgTissus");
 let navBtnIn = true;
 
 const NavbarStyle = (a, b) => {
@@ -35,18 +32,60 @@ nav_btn.addEventListener("click", () => {
   }
 });
 
-buttons.forEach((button) => {
-  button.addEventListener("click", (e) => {
-    const calcNextSlide = e.target.id === "next" ? 1 : -1;
-    const slideActive = document.querySelector(".active");
-    newIndex = calcNextSlide + [...slides].indexOf(slideActive);
+// Carousel =>
+const buttons = document.querySelectorAll(".btn");
+const slides = document.querySelectorAll(".slide");
+const pic = document.querySelectorAll(".carou");
+const inpPics = document.getElementsByName("imgCarou");
+let indCheck = 1;
+let interval;
 
-    if (newIndex < 0) newIndex = [...slides].length - 1;
-    if (newIndex >= [...slides].length) newIndex = 0;
-    slides[newIndex].classList.add("active");
-    slideActive.classList.remove("active");
+const changePic = (namePic) => {
+  pic.forEach((divs) => {
+    divs.parentElement.classList.remove("active");
+    if (divs.id == namePic) divs.parentElement.classList.add("active");
+  });
+};
+
+inpPics.forEach((radio) => {
+  radio.addEventListener("click", () => {
+    indCheck = radio.id.slice(4) - 1;
+    changePic(radio.id);
+    clearInterval(interval);
   });
 });
+
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    inpPics.forEach((check) => {
+      check.checked = false;
+    });
+    const calcNextSlide = e.target.id === "next" ? 1 : -1;
+    indCheck += calcNextSlide;
+    if (indCheck < 0) indCheck = inpPics.length - 1;
+    if (indCheck >= inpPics.length) indCheck = 0;
+    inpPics[indCheck].checked = true;
+    changePic(inpPics[indCheck].id);
+    clearInterval(interval);
+  });
+});
+
+const picsChecked = () => {
+  inpPics.forEach((check) => {
+    check.checked = false;
+  });
+  indCheck++;
+  if (indCheck >= inpPics.length) indCheck = 0;
+  inpPics[indCheck].checked = true;
+  changePic(inpPics[indCheck].id);
+};
+
+interval = setInterval(() => {
+  picsChecked();
+}, 3000);
+
+// Zoom tissu =>
+const zoomTissus = document.querySelectorAll(".imgTissus");
 
 zoomTissus.forEach((img) => {
   const removeClass = () => {

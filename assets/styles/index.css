@@ -280,6 +280,28 @@ nav a:hover {
 .favorite_accueil .carousel_accueil ul .slide.active {
   opacity: 1;
 }
+.favorite_accueil .carousel_accueil span {
+  position: absolute;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  bottom: 0px;
+  cursor: default;
+}
+.favorite_accueil .carousel_accueil span input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 2px solid rgb(250, 238, 217);
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.favorite_accueil .carousel_accueil span input:checked {
+  background-color: #bb2b79;
+  border: none;
+}
 
 .Title_container {
   display: grid;
