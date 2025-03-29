@@ -79,10 +79,11 @@ const picsChecked = () => {
   inpPics[indCheck].checked = true;
   changePic(inpPics[indCheck].id);
 };
-
-interval = setInterval(() => {
-  picsChecked();
-}, 3000);
+if (document.location.pathname == "/Vitrine/index.html") {
+  interval = setInterval(() => {
+    picsChecked();
+  }, 3000);
+}
 
 // Zoom tissu =>
 const zoomTissus = document.querySelectorAll(".imgTissus");
