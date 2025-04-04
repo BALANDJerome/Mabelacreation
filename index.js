@@ -79,7 +79,12 @@ const picsChecked = () => {
   inpPics[indCheck].checked = true;
   changePic(inpPics[indCheck].id);
 };
-if (document.location.pathname == "/Vitrine/index.html") {
+if (
+  document.location.href.slice(
+    document.location.href.length - 10,
+    document.location.href.length
+  ) == "index.html"
+) {
   interval = setInterval(() => {
     picsChecked();
   }, 3000);
