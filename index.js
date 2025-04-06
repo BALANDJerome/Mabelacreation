@@ -34,7 +34,6 @@ nav_btn.addEventListener("click", () => {
 
 // Carousel =>
 const buttons = document.querySelectorAll(".btn");
-const slides = document.querySelectorAll(".slide");
 const pic = document.querySelectorAll(".carou");
 const inpPics = document.getElementsByName("imgCarou");
 let indCheck = 1;
@@ -89,6 +88,8 @@ if (
     picsChecked();
   }, 3000);
 }
+
+// Carousel pages
 
 // Zoom tissu =>
 const zoomTissus = document.querySelectorAll(".imgTissus");

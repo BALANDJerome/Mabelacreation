@@ -339,9 +339,52 @@ nav a:hover {
 .Items_container .Item3_container {
   display: grid;
 }
-.Items_container .Item1_container img,
-.Items_container .Item2_container img,
-.Items_container .Item3_container img {
+.Items_container .Item1_container .slide,
+.Items_container .Item2_container .slide,
+.Items_container .Item3_container .slide {
+  position: absolute;
+  opacity: 0;
+}
+.Items_container .Item1_container .active,
+.Items_container .Item2_container .active,
+.Items_container .Item3_container .active {
+  opacity: 1;
+}
+.Items_container .Item1_container .Item1_pics ul,
+.Items_container .Item1_container .Item2_pics ul,
+.Items_container .Item1_container .Item3_pics ul,
+.Items_container .Item2_container .Item1_pics ul,
+.Items_container .Item2_container .Item2_pics ul,
+.Items_container .Item2_container .Item3_pics ul,
+.Items_container .Item3_container .Item1_pics ul,
+.Items_container .Item3_container .Item2_pics ul,
+.Items_container .Item3_container .Item3_pics ul {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.Items_container .Item1_container .Item1_pics ul li,
+.Items_container .Item1_container .Item2_pics ul li,
+.Items_container .Item1_container .Item3_pics ul li,
+.Items_container .Item2_container .Item1_pics ul li,
+.Items_container .Item2_container .Item2_pics ul li,
+.Items_container .Item2_container .Item3_pics ul li,
+.Items_container .Item3_container .Item1_pics ul li,
+.Items_container .Item3_container .Item2_pics ul li,
+.Items_container .Item3_container .Item3_pics ul li {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+.Items_container .Item1_container .Item1_pics ul li img,
+.Items_container .Item1_container .Item2_pics ul li img,
+.Items_container .Item1_container .Item3_pics ul li img,
+.Items_container .Item2_container .Item1_pics ul li img,
+.Items_container .Item2_container .Item2_pics ul li img,
+.Items_container .Item2_container .Item3_pics ul li img,
+.Items_container .Item3_container .Item1_pics ul li img,
+.Items_container .Item3_container .Item2_pics ul li img,
+.Items_container .Item3_container .Item3_pics ul li img {
   width: 100%;
   height: 100%;
 }
