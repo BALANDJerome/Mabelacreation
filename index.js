@@ -90,6 +90,28 @@ if (
 }
 
 // Carousel pages
+// const slides = document.querySelectorAll(".slide");
+const radios = document.querySelectorAll("input[type='radio']");
+
+radios.forEach((radio) =>
+  radio.addEventListener("click", (e) => {
+    if (e.target.name == "imgCarou") {
+      return;
+      console.log(e.target.name);
+    } else {
+      changeImg(e.target.name, e.target.id);
+    }
+  })
+);
+
+const changeImg = (name, id) => {
+  // const radio = document.querySelectorAll(`input[name=${a}]`);
+  const slides = document.querySelectorAll(`.${name}`);
+  slides.forEach((li) => {
+    li.classList.remove("active");
+    if (li.id == id) li.classList.add("active");
+  });
+};
 
 // Zoom tissu =>
 const zoomTissus = document.querySelectorAll(".imgTissus");

@@ -350,6 +350,17 @@ nav a:hover {
 .Items_container .Item3_container .active {
   opacity: 1;
 }
+.Items_container .Item1_container .Item1_pics,
+.Items_container .Item1_container .Item2_pics,
+.Items_container .Item1_container .Item3_pics,
+.Items_container .Item2_container .Item1_pics,
+.Items_container .Item2_container .Item2_pics,
+.Items_container .Item2_container .Item3_pics,
+.Items_container .Item3_container .Item1_pics,
+.Items_container .Item3_container .Item2_pics,
+.Items_container .Item3_container .Item3_pics {
+  position: relative;
+}
 .Items_container .Item1_container .Item1_pics ul,
 .Items_container .Item1_container .Item2_pics ul,
 .Items_container .Item1_container .Item3_pics ul,
@@ -387,6 +398,22 @@ nav a:hover {
 .Items_container .Item3_container .Item3_pics ul li img {
   width: 100%;
   height: 100%;
+}
+.Items_container .Item1_container .Item1_pics span,
+.Items_container .Item1_container .Item2_pics span,
+.Items_container .Item1_container .Item3_pics span,
+.Items_container .Item2_container .Item1_pics span,
+.Items_container .Item2_container .Item2_pics span,
+.Items_container .Item2_container .Item3_pics span,
+.Items_container .Item3_container .Item1_pics span,
+.Items_container .Item3_container .Item2_pics span,
+.Items_container .Item3_container .Item3_pics span {
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  cursor: default;
 }
 .Items_container .Item1_container .Item1_text,
 .Items_container .Item1_container .Item2_text,
