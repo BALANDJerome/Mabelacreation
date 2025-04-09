@@ -97,7 +97,6 @@ radios.forEach((radio) =>
   radio.addEventListener("click", (e) => {
     if (e.target.name == "imgCarou") {
       return;
-      console.log(e.target.name);
     } else {
       changeImg(e.target.name, e.target.id);
     }
