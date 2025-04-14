@@ -372,6 +372,7 @@ nav a:hover {
 .Items_container .Item3_container .Item3_pics ul {
   position: relative;
   min-height: 370px;
+  height: 100%;
   width: 100%;
 }
 .Items_container .Item1_container .Item1_pics ul li,
@@ -463,7 +464,7 @@ nav a:hover {
 .Items_container .Item2_container .imgTissusContainer,
 .Items_container .Item3_container .imgTissusContainer {
   grid-area: 2/1/3/3;
-  margin: 25px auto;
+  margin: 25px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -506,10 +507,14 @@ nav a:hover {
     padding: 50px 0 0 0;
   }
 }
-.Items_container .Item1_container {
+.Items_container .Item1_container,
+.Items_container .Item3_container {
   grid-template-columns: 30% 70%;
 }
-.Items_container .Item1_container .Item1_text li {
+.Items_container .Item1_container .Item1_text li,
+.Items_container .Item1_container .Item3_text li,
+.Items_container .Item3_container .Item1_text li,
+.Items_container .Item3_container .Item3_text li {
   margin-left: 40px;
   list-style: "- ";
 }
@@ -526,12 +531,6 @@ nav a:hover {
   .Items_container .Item2_container {
     border-bottom: none;
   }
-}
-.Items_container .Item3_container {
-  grid-template-columns: 30% 70%;
-}
-.Items_container .Item3_container h4 {
-  margin: 10px 0;
 }
 
 footer {
