@@ -462,6 +462,27 @@ nav a:hover {
   cursor: default;
   z-index: 2;
 }
+@media screen and (max-width: 650px) {
+  .Items_container .Item1_container .Item1_pics span input,
+  .Items_container .Item1_container .Item2_pics span input,
+  .Items_container .Item1_container .Item3_pics span input,
+  .Items_container .Item1_container .Item4_pics span input,
+  .Items_container .Item2_container .Item1_pics span input,
+  .Items_container .Item2_container .Item2_pics span input,
+  .Items_container .Item2_container .Item3_pics span input,
+  .Items_container .Item2_container .Item4_pics span input,
+  .Items_container .Item3_container .Item1_pics span input,
+  .Items_container .Item3_container .Item2_pics span input,
+  .Items_container .Item3_container .Item3_pics span input,
+  .Items_container .Item3_container .Item4_pics span input,
+  .Items_container .Item4_container .Item1_pics span input,
+  .Items_container .Item4_container .Item2_pics span input,
+  .Items_container .Item4_container .Item3_pics span input,
+  .Items_container .Item4_container .Item4_pics span input {
+    height: 18px;
+    width: 18px;
+  }
+}
 .Items_container .Item1_container .Item1_text,
 .Items_container .Item1_container .Item2_text,
 .Items_container .Item1_container .Item3_text,

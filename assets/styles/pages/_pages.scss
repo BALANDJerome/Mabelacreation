@@ -65,6 +65,12 @@
         transform: translate(-50%);
         cursor: default;
         z-index: 2;
+        @media screen and (max-width: 650px) {
+          input {
+            height: 18px;
+            width: 18px;
+          }
+        }
       }
     }
     .Item1_text,
