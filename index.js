@@ -116,6 +116,24 @@ imgRadio.forEach((img) => {
       changeImg(e.target.parentElement.classList[1], liId);
     }
   });
+  img.addEventListener("dragleave", (e) => {
+    liId = e.target.parentElement.id;
+    if (e.x > 100) {
+      if (liId == e.target.parentElement.parentElement.children.length) {
+        liId = 1;
+      } else {
+        liId++;
+      }
+      changeImg(e.target.parentElement.classList[1], liId);
+    } else {
+      if (liId == 1) {
+        liId = e.target.parentElement.parentElement.children.length;
+      } else {
+        liId--;
+      }
+      changeImg(e.target.parentElement.classList[1], liId);
+    }
+  });
 });
 
 const changeImg = (name, id) => {
