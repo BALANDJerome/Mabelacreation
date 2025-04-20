@@ -32,7 +32,7 @@ nav_btn.addEventListener("click", () => {
   }
 });
 
-// Carousel =>
+// Carousel accueil =>
 const buttons = document.querySelectorAll(".btn");
 const pic = document.querySelectorAll(".carou");
 const inpPics = document.getElementsByName("imgCarou");
@@ -89,9 +89,9 @@ if (
   }, 3000);
 }
 
-// Carousel pages
-// const slides = document.querySelectorAll(".slide");
+// Carousel pages =>
 const radios = document.querySelectorAll("input[type='radio']");
+const imgRadio = document.querySelectorAll(".slide");
 
 radios.forEach((radio) =>
   radio.addEventListener("click", (e) => {
@@ -102,13 +102,37 @@ radios.forEach((radio) =>
     }
   })
 );
+imgRadio.forEach((img) => {
+  img.addEventListener("click", (e) => {
+    if (e.target.className == "carou") {
+      return;
+    } else {
+      liId = e.target.parentElement.id;
+      if (liId == e.target.parentElement.parentElement.children.length) {
+        liId = 1;
+      } else {
+        liId++;
+      }
+      changeImg(e.target.parentElement.classList[1], liId);
+    }
+  });
+});
 
 const changeImg = (name, id) => {
-  // const radio = document.querySelectorAll(`input[name=${a}]`);
   const slides = document.querySelectorAll(`.${name}`);
   slides.forEach((li) => {
     li.classList.remove("active");
-    if (li.id == id) li.classList.add("active");
+    if (li.id == id) {
+      li.classList.add("active");
+      const checkRadio = document.querySelectorAll(`input[name="${name}"]`);
+      checkRadio.forEach((radio) => {
+        if (radio.id == id) {
+          radio.checked = true;
+        } else {
+          radio.checked = false;
+        }
+      });
+    }
   });
 };
 

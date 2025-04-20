@@ -30,9 +30,11 @@
     .slide {
       position: absolute;
       opacity: 0;
+      z-index: 0;
     }
     .active {
       opacity: 1;
+      z-index: 1;
     }
     .Item1_pics,
     .Item2_pics,
@@ -62,6 +64,7 @@
         bottom: 0px;
         transform: translate(-50%);
         cursor: default;
+        z-index: 2;
       }
     }
     .Item1_text,
