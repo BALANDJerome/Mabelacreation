@@ -479,8 +479,8 @@ nav a:hover {
   .Items_container .Item4_container .Item2_pics span input,
   .Items_container .Item4_container .Item3_pics span input,
   .Items_container .Item4_container .Item4_pics span input {
-    height: 18px;
-    width: 18px;
+    height: 16px;
+    width: 16px;
   }
 }
 .Items_container .Item1_container .Item1_text,
