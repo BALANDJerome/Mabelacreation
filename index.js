@@ -116,7 +116,7 @@ imgRadio.forEach((img) => {
       changeImg(e.target.parentElement.classList[1], liId);
     }
   });
-  img.addEventListener("dragleave", (e) => {
+  img.addEventListener("swipe", (e) => {
     liId = e.target.parentElement.id;
     if (e.x > 100) {
       if (liId == e.target.parentElement.parentElement.children.length) {
