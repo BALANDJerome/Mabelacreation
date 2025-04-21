@@ -121,46 +121,34 @@ imgRadio.forEach((img) => {
   img.addEventListener("touchstart", handleTouchStart, false);
   img.addEventListener("touchmove", handleTouchMove, false);
   var xDown = null;
-  var yDown = null;
-  function handleTouchStart(evt) {
-    xDown = evt.touches[0].clientX;
-    yDown = evt.touches[0].clientY;
+  function handleTouchStart(e) {
+    xDown = e.touches[0].clientX;
   }
-  function handleTouchMove(evt) {
-    if (!xDown || !yDown) {
+  function handleTouchMove(e) {
+    if (!xDown) {
       return;
     }
-
-    var xUp = evt.touches[0].clientX;
-    var yUp = evt.touches[0].clientY;
-
+    var xUp = e.touches[0].clientX;
     var xDiff = xDown - xUp;
-    var yDiff = yDown - yUp;
-    if (Math.abs(xDiff) + Math.abs(yDiff) > 150) {
-      //to deal with to short swipes
-
-      if (Math.abs(xDiff) > Math.abs(yDiff)) {
-        /*most significant*/
-        if (xDiff > 0) {
-          /* left swipe */
-          alert("left!");
-        } else {
-          /* right swipe */
-          alert("right!");
-        }
+    if (xDiff > 0) {
+      liId = e.target.parentElement.id;
+      if (liId == e.target.parentElement.parentElement.children.length) {
+        liId = 1;
       } else {
-        if (yDiff > 0) {
-          /* up swipe */
-          alert("Up!");
-        } else {
-          /* down swipe */
-          alert("Down!");
-        }
+        liId++;
       }
-      /* reset values */
-      xDown = null;
-      yDown = null;
+      changeImg(e.target.parentElement.classList[1], liId);
+    } else {
+      liId = e.target.parentElement.id;
+      console.log(e.target.parentElement.parentElement.children.length);
+      if (liId == 1) {
+        liId = e.target.parentElement.parentElement.children.length;
+      } else {
+        liId--;
+      }
+      changeImg(e.target.parentElement.classList[1], liId);
     }
+    xDown = null;
   }
 
   // ==========================================
