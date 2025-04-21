@@ -104,7 +104,7 @@ radios.forEach((radio) =>
 );
 imgRadio.forEach((img) => {
   img.addEventListener("click", (e) => {
-    if (e.target.className == "carou") {
+    if (e.target.className == "carou" || e.view.window.innerWidth < 650) {
       return;
     } else {
       liId = e.target.parentElement.id;
@@ -125,12 +125,11 @@ imgRadio.forEach((img) => {
     xDown = e.touches[0].clientX;
   }
   function handleTouchMove(e) {
-    if (!xDown) {
+    if (!xDown || e.target.className == "carou") {
       return;
     }
     var xUp = e.touches[0].clientX;
-    var xDiff = xDown - xUp;
-    if (xDiff > 0) {
+    if (xDown > xUp) {
       liId = e.target.parentElement.id;
       if (liId == e.target.parentElement.parentElement.children.length) {
         liId = 1;
@@ -140,7 +139,6 @@ imgRadio.forEach((img) => {
       changeImg(e.target.parentElement.classList[1], liId);
     } else {
       liId = e.target.parentElement.id;
-      console.log(e.target.parentElement.parentElement.children.length);
       if (liId == 1) {
         liId = e.target.parentElement.parentElement.children.length;
       } else {
