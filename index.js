@@ -172,37 +172,21 @@ const changeImg = (name, id) => {
 
 // InnerHTML Tissus =>
 
-// const TissusCape = document.querySelectorAll("div.Cape");
-// const TissusCoussins = document.querySelectorAll("div.Coussins");
-const TissusCouverture = document.querySelectorAll("div.Couverture");
-// const TissusDoubleGaze = document.querySelectorAll("div.DoubleGaze");
-// const TissusDoudou = document.querySelectorAll("div.Doudou");
-// const TissusMotifs = document.querySelectorAll("div.Motif");
-// const TissusUnis = document.querySelectorAll("div.Uni");
-
 const CreatTissus = (tissu, x) => {
   const Tissus = document.querySelectorAll(`div.${tissu}`);
-  for (i = 1; i < x + 1; i++) {
-    Tissus[0].innerHTML += `<img class="imgTissus" src="./assets/img/Tissus/${tissu}/${tissu}_${i}.jpg" alt="Image tissu ${tissu}">`;
-    if (Tissus.length > 1) {
-      Tissus[1].innerHTML += `<img class="imgTissus" src="./assets/img/Tissus/${tissu}/${tissu}_${i}.jpg" alt="Image tissu ${tissu}">`;
+  Tissus.forEach((tis) => {
+    for (i = 1; i < x + 1; i++) {
+      tis.innerHTML += `<img class="imgTissus" src="./assets/img/Tissus/${tissu}/${tissu}_${i}.jpg" alt="Image tissu ${tissu}">`;
     }
-    if (Tissus.length > 2) {
-      Tissus[2].innerHTML += `<img class="imgTissus" src="./assets/img/Tissus/${tissu}/${tissu}_${i}.jpg" alt="Image tissu ${tissu}">`;
-    }
-    if (Tissus.length > 3) {
-      Tissus[3].innerHTML += `<img class="imgTissus" src="./assets/img/Tissus/${tissu}/${tissu}_${i}.jpg" alt="Image tissu ${tissu}">`;
-    }
-  }
+  });
 };
-// CreatTissus("Cape", 9);
-// CreatTissus("Coussins", 6);
-// CreatTissus("Couverture", 16);
-// CreatTissus("DoubleGaze", 9);
-// CreatTissus("Doudou", 9);
-// CreatTissus("Motif", 20);
-// CreatTissus("Uni", 9);
-// };
+CreatTissus("Cape", 9);
+CreatTissus("Coussins", 6);
+CreatTissus("Couverture", 16);
+CreatTissus("DoubleGaze", 9);
+CreatTissus("Doudou", 9);
+CreatTissus("Motif", 20);
+CreatTissus("Uni", 9);
 
 // Zoom tissu =>
 
