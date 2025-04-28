@@ -174,19 +174,43 @@ const changeImg = (name, id) => {
 
 const CreatTissus = (tissu, x) => {
   const Tissus = document.querySelectorAll(`div.${tissu}`);
+
   Tissus.forEach((tis) => {
     for (i = 1; i < x + 1; i++) {
       tis.innerHTML += `<img class="imgTissus" src="./assets/img/Tissus/${tissu}/${tissu}_${i}.jpg" alt="Image tissu ${tissu}">`;
+      if (i == 4) {
+        tis.children[4].style.background = "red";
+      }
     }
+    // tis.innerHTML += `<button id="creatButton">></button>`;
   });
 };
-CreatTissus("Cape", 9);
-CreatTissus("Coussins", 6);
-CreatTissus("Couverture", 16);
-CreatTissus("DoubleGaze", 9);
-CreatTissus("Doudou", 9);
-CreatTissus("Motif", 20);
-CreatTissus("Uni", 9);
+
+const TitleTissus = document.querySelectorAll("h3");
+let tissusList = [];
+let tissusListSort = [];
+
+TitleTissus.forEach((title) => {
+  tissusList.push({
+    className: title.parentElement.className,
+    id: parseInt(title.id),
+  });
+});
+
+tissusList.forEach((tissu) => {
+  if (!tissusListSort.some((a) => a == tissu.className)) {
+    tissusListSort.push(tissu.className);
+    CreatTissus(tissu.className, tissu.id);
+  }
+});
+
+// const creatButton = document.querySelectorAll("#creatButton");
+
+// creatButton.forEach((button) => {
+//   button.addEventListener("click", (e) => {
+//     console.log('ok');
+//   });
+// });
 
 // Zoom tissu =>
 
@@ -205,7 +229,7 @@ zoomTissus.forEach((img) => {
   img.addEventListener("click", () => {
     if (img.className === "imgTissus") {
       removeClass(img);
-      img.style.transform = "scale(1.8)";
+      img.style.transform = "scale(3)";
       img.style.cursor = "zoom-out";
       img.classList.add("zoom");
     } else {

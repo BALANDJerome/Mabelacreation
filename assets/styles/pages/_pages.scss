@@ -100,14 +100,28 @@
       flex-wrap: wrap;
       .imgTissus {
         border: 2px solid black;
-        background: green;
         width: 50px;
         height: 50px;
         margin: 5px;
         cursor: zoom-in;
         transition: 0.3s ease-in-out;
       }
+      #creatButton {
+        position: absolute;
+        transform: translate(10px);
+        height: 60px;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 0 7px 7px 0;
+        background-color: #ffffffb5;
+        transition: 0.15s ease-in-out;
+      }
+      #creatButton:hover {
+        transform: scale(1.1) translate(10px);
+      }
       .zoom {
+        border: none;
         &::after {
           content: "\2716";
           position: absolute;
@@ -115,7 +129,6 @@
           height: 10px;
           width: 10px;
         }
-        background: red;
       }
     }
     @media screen and (max-width: 650px) {
