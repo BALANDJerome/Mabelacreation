@@ -357,6 +357,26 @@ nav a:hover {
   z-index: 1;
 }
 .Items_container .Item1_container .Item1_pics,
+.Items_container .Item1_container .Item3_pics,
+.Items_container .Item2_container .Item1_pics,
+.Items_container .Item2_container .Item3_pics,
+.Items_container .Item3_container .Item1_pics,
+.Items_container .Item3_container .Item3_pics,
+.Items_container .Item4_container .Item1_pics,
+.Items_container .Item4_container .Item3_pics {
+  left: -720px;
+}
+.Items_container .Item1_container .Item2_pics,
+.Items_container .Item1_container .Item4_pics,
+.Items_container .Item2_container .Item2_pics,
+.Items_container .Item2_container .Item4_pics,
+.Items_container .Item3_container .Item2_pics,
+.Items_container .Item3_container .Item4_pics,
+.Items_container .Item4_container .Item2_pics,
+.Items_container .Item4_container .Item4_pics {
+  left: 720px;
+}
+.Items_container .Item1_container .Item1_pics,
 .Items_container .Item1_container .Item2_pics,
 .Items_container .Item1_container .Item3_pics,
 .Items_container .Item1_container .Item4_pics,
@@ -373,6 +393,8 @@ nav a:hover {
 .Items_container .Item4_container .Item3_pics,
 .Items_container .Item4_container .Item4_pics {
   position: relative;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 .Items_container .Item1_container .Item1_pics ul,
 .Items_container .Item1_container .Item2_pics ul,
@@ -486,6 +508,26 @@ nav a:hover {
   }
 }
 .Items_container .Item1_container .Item1_text,
+.Items_container .Item1_container .Item3_text,
+.Items_container .Item2_container .Item1_text,
+.Items_container .Item2_container .Item3_text,
+.Items_container .Item3_container .Item1_text,
+.Items_container .Item3_container .Item3_text,
+.Items_container .Item4_container .Item1_text,
+.Items_container .Item4_container .Item3_text {
+  left: 1200px;
+}
+.Items_container .Item1_container .Item2_text,
+.Items_container .Item1_container .Item4_text,
+.Items_container .Item2_container .Item2_text,
+.Items_container .Item2_container .Item4_text,
+.Items_container .Item3_container .Item2_text,
+.Items_container .Item3_container .Item4_text,
+.Items_container .Item4_container .Item2_text,
+.Items_container .Item4_container .Item4_text {
+  left: -1200px;
+}
+.Items_container .Item1_container .Item1_text,
 .Items_container .Item1_container .Item2_text,
 .Items_container .Item1_container .Item3_text,
 .Items_container .Item1_container .Item4_text,
@@ -501,6 +543,9 @@ nav a:hover {
 .Items_container .Item4_container .Item2_text,
 .Items_container .Item4_container .Item3_text,
 .Items_container .Item4_container .Item4_text {
+  position: relative;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

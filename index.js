@@ -178,9 +178,9 @@ const CreatTissus = (tissu, x) => {
   Tissus.forEach((tis) => {
     for (i = 1; i < x + 1; i++) {
       tis.innerHTML += `<img class="imgTissus" src="./assets/img/Tissus/${tissu}/${tissu}_${i}.jpg" alt="Image tissu ${tissu}">`;
-      if (i == 4) {
-        tis.children[4].style.background = "red";
-      }
+      // if (i == 4) {
+      //   tis.children[4].style.background = "red";
+      // }
     }
     // tis.innerHTML += `<button id="creatButton">></button>`;
   });
@@ -236,4 +236,36 @@ zoomTissus.forEach((img) => {
       removeClass(img);
     }
   });
+});
+
+// Apparition section pages
+
+const divPics1 = document.querySelector(".Item1_pics");
+const divText1 = document.querySelector(".Item1_text");
+const divPics2 = document.querySelector(".Item2_pics");
+const divText2 = document.querySelector(".Item2_text");
+const divPics3 = document.querySelector(".Item3_pics");
+const divText3 = document.querySelector(".Item3_text");
+const divPics4 = document.querySelector(".Item4_pics");
+const divText4 = document.querySelector(".Item4_text");
+
+window.addEventListener("load", () => {
+  divPics1.style.left = "0";
+  divText1.style.left = "0";
+});
+window.addEventListener("scroll", (e) => {
+  if (window.scrollY > 300 && innerWidth > 650) {
+    console.log(innerWidth);
+
+    divPics2.style.left = "0";
+    divText2.style.left = "0";
+  }
+  if (window.scrollY > 700 && innerWidth > 650) {
+    divPics3.style.left = "0";
+    divText3.style.left = "0";
+  }
+  if (window.scrollY > 1100 && !!divPics4 && innerWidth > 650) {
+    divPics4.style.left = "0";
+    divText4.style.left = "0";
+  }
 });
