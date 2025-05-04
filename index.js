@@ -250,19 +250,21 @@ const divPics4 = document.querySelector(".Item4_pics");
 const divText4 = document.querySelector(".Item4_text");
 
 window.addEventListener("load", () => {
-  divPics1.style.left = "0";
-  divText1.style.left = "0";
+  if (!!divPics1) {
+    divPics1.style.left = "0";
+    divText1.style.left = "0";
+  }
 });
 window.addEventListener("scroll", (e) => {
-  if (window.scrollY > 300 && innerWidth > 650) {
+  if (window.scrollY > 300 && !!divPics2 && visualViewport.width > 1000) {
     divPics2.style.left = "0";
     divText2.style.left = "0";
   }
-  if (window.scrollY > 700 && innerWidth > 650) {
+  if (window.scrollY > 700 && !!divPics3 && visualViewport.width > 1000) {
     divPics3.style.left = "0";
     divText3.style.left = "0";
   }
-  if (window.scrollY > 1100 && !!divPics4 && innerWidth > 650) {
+  if (window.scrollY > 1100 && !!divPics4 && visualViewport.width > 1000) {
     divPics4.style.left = "0";
     divText4.style.left = "0";
   }
