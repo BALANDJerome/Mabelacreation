@@ -255,8 +255,6 @@ window.addEventListener("load", () => {
 });
 window.addEventListener("scroll", (e) => {
   if (window.scrollY > 300 && innerWidth > 650) {
-    console.log(innerWidth);
-
     divPics2.style.left = "0";
     divText2.style.left = "0";
   }

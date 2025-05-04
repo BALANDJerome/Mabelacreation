@@ -39,10 +39,16 @@
     .Item1_pics,
     .Item3_pics {
       left: -720px;
+      @media screen and (max-width: 650px) {
+        left: 0;
+      }
     }
     .Item2_pics,
     .Item4_pics {
       left: 720px;
+      @media screen and (max-width: 650px) {
+        left: 0;
+      }
     }
     .Item1_pics,
     .Item2_pics,
@@ -86,10 +92,16 @@
     .Item1_text,
     .Item3_text {
       left: 1200px;
+      @media screen and (max-width: 650px) {
+        left: 0;
+      }
     }
     .Item2_text,
     .Item4_text {
       left: -1200px;
+      @media screen and (max-width: 650px) {
+        left: 0;
+      }
     }
     .Item1_text,
     .Item2_text,
